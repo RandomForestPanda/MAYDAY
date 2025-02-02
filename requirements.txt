@@ -1,0 +1,7 @@
+Flask
+Flask-MySQLdb
+uvicorn
+bcrypt
+SpeechRecognition
+streamlit
+fastapi

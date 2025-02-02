@@ -1,0 +1,399 @@
+{
+  "aircraft": {
+    "type": "Airbus A320/A321",
+    "version": "1.0"
+  },
+  "checklist_categories": {
+    "normal_procedures": {
+      "pre_flight": {
+        "name": "Pre-Flight Flows",
+        "items": [
+          {
+            "task": "Download charts & NOTAMS",
+            "condition": "Required",
+            "notes": null
+          },
+          {
+            "task": "Check weather & forecasts",
+            "condition": "Required",
+            "notes": null
+          },
+          {
+            "task": "Load PAX, CARGO & FUEL",
+            "condition": "Required",
+            "notes": null
+          }
+        ]
+      },
+      "pre_start": {
+        "name": "Pre-Start Checklist",
+        "items": [
+          {
+            "task": "Parking Brake",
+            "condition": "SET",
+            "notes": null
+          },
+          {
+            "task": "Chocks",
+            "condition": "REMOVED",
+            "notes": null
+          },
+          {
+            "task": "GPU",
+            "condition": "CONNECTED",
+            "notes": null
+          }
+        ]
+      },
+      "startup": {
+        "name": "Startup Checklist",
+        "items": [
+          {
+            "task": "APU",
+            "condition": "START",
+            "notes": null
+          },
+          {
+            "task": "APU Bleed",
+            "condition": "RUN",
+            "notes": "When available"
+          }
+        ]
+      },
+      "before_taxi": {
+        "name": "Before Taxi Checklist",
+        "items": [
+          {
+            "task": "Probe/Window Heat",
+            "condition": "AUTO",
+            "notes": null
+          },
+          {
+            "task": "HDG Indicator / Altimeters",
+            "condition": "SET",
+            "notes": null
+          }
+        ]
+      },
+      "taxi": {
+        "name": "Taxi Checklist",
+        "items": [
+          {
+            "task": "Taxi Lights",
+            "condition": "ON",
+            "notes": null
+          },
+          {
+            "task": "Parking Brake",
+            "condition": "RELEASE",
+            "notes": null
+          }
+        ]
+      },
+      "before_takeoff": {
+        "name": "Before Take-off Checklist",
+        "items": [
+          {
+            "task": "Parking Brake",
+            "condition": "SET",
+            "notes": null
+          },
+          {
+            "task": "Flight Instruments",
+            "condition": "CHECK",
+            "notes": null
+          }
+        ]
+      },
+      "takeoff": {
+        "name": "Take-off Checklist",
+        "sequence": [
+          {
+            "task": "Thrust",
+            "condition": "40% N1",
+            "notes": "Let spool up"
+          },
+          {
+            "task": "Takeoff Thrust",
+            "condition": "FULL OR TO/GA",
+            "notes": null
+          }
+        ]
+      }
+    },
+    "emergency_procedures": {
+      "engine_failure": {
+        "during_takeoff": {
+          "below_v1": {
+            "name": "Engine Failure Below V1",
+            "items": [
+              {
+                "task": "Thrust Levers",
+                "condition": "IDLE",
+                "notes": "Immediate action"
+              },
+              {
+                "task": "Brakes",
+                "condition": "APPLY MAX",
+                "notes": "Maximum braking"
+              }
+            ]
+          },
+          "above_v1": {
+            "name": "Engine Failure Above V1",
+            "items": [
+              {
+                "task": "Thrust Levers",
+                "condition": "TO/GA",
+                "notes": "Continue takeoff"
+              },
+              {
+                "task": "Rotate",
+                "condition": "AT VR",
+                "notes": null
+              }
+            ]
+          }
+        },
+        "during_flight": {
+          "name": "Engine Failure In Flight",
+          "items": [
+            {
+              "task": "Thrust Levers",
+              "condition": "IDLE",
+              "notes": null
+            },
+            {
+              "task": "Fuel Cutoff",
+              "condition": "ENGINE AFFECTED",
+              "notes": null
+            }
+          ]
+        }
+      },
+      "engine_fire": {
+        "on_ground": {
+          "name": "Engine Fire On Ground",
+          "items": [
+            {
+              "task": "Thrust Levers",
+              "condition": "IDLE",
+              "notes": "Immediate action"
+            },
+            {
+              "task": "Fuel Cutoff",
+              "condition": "ENGINE AFFECTED",
+              "notes": null
+            }
+          ]
+        },
+        "in_flight": {
+          "name": "Engine Fire In Flight",
+          "items": [
+            {
+              "task": "Thrust Levers",
+              "condition": "IDLE",
+              "notes": "Immediate action"
+            },
+            {
+              "task": "Fuel Cutoff",
+              "condition": "ENGINE AFFECTED",
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    "additional_procedures": {
+      "approach": {
+        "name": "Approach Checklist",
+        "items": [
+          {
+            "task": "Fasten Seat Belts",
+            "condition": "ON",
+            "notes": null
+          },
+          {
+            "task": "Radios",
+            "condition": "SET",
+            "notes": null
+          }
+        ]
+      },
+      "landing": {
+        "name": "Landing Checklist",
+        "items": [
+          {
+            "task": "Landing Gear",
+            "condition": "CHECK DOWN",
+            "notes": null
+          },
+          {
+            "task": "Autopilot",
+            "condition": "AS REQUIRED",
+            "notes": null
+          }
+        ]
+      },
+      "after_landing": {
+        "name": "After Landing Checklist",
+        "items": [
+          {
+            "task": "Spoilers",
+            "condition": "DISARMED",
+            "notes": null
+          },
+          {
+            "task": "Flaps",
+            "condition": "RETRACT",
+            "notes": null
+          }
+        ]
+      },
+      "parking": {
+        "name": "Parking Checklist",
+        "items": [
+          {
+            "task": "Parking Brakes",
+            "condition": "SET",
+            "notes": null
+          },
+          {
+            "task": "Thrust Levers",
+            "condition": "IDLE",
+            "notes": null
+          }
+        ]
+      }
+    },
+    "contingency_procedures": {
+      "weather_related": {
+        "windshear": {
+          "name": "Windshear Procedures",
+          "during_takeoff": {
+            "items": [
+              {
+                "task": "Thrust Levers",
+                "condition": "TO/GA",
+                "notes": "Immediate action"
+              },
+              {
+                "task": "Pitch",
+                "condition": "15° NOSE UP",
+                "notes": null
+              }
+            ]
+          },
+          "during_landing": {
+            "items": [
+              {
+                "task": "Go-Around",
+                "condition": "INITIATE",
+                "notes": null
+              },
+              {
+                "task": "Escape Maneuver",
+                "condition": "EXECUTE",
+                "notes": null
+              }
+            ]
+          }
+        },
+        "icing": {
+          "name": "Anti-Ice Procedures",
+          "items": [
+            {
+              "task": "Engine Anti-Ice",
+              "condition": "AS REQUIRED",
+              "notes": "Based on conditions"
+            },
+            {
+              "task": "Wing Anti-Ice",
+              "condition": "AS REQUIRED",
+              "notes": "Based on conditions"
+            }
+          ]
+        }
+      },
+      "systems_failure": {
+        "hydraulic": {
+          "name": "Hydraulic System Failure",
+          "items": [
+            {
+              "task": "Hydraulic Pumps",
+              "condition": "CHECK",
+              "notes": null
+            },
+            {
+              "task": "Manual Reversion",
+              "condition": "ATTEMPT",
+              "notes": null
+            }
+          ]
+        },
+        "electrical": {
+          "name": "Electrical System Failure",
+          "items": [
+            {
+              "task": "Batteries",
+              "condition": "ON",
+              "notes": null
+            },
+            {
+              "task": "Essential Systems",
+              "condition": "PRIORITIZE",
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    "accident_based_procedures": {
+      "1996_air_traffic_collision": {
+        "name": "Air Traffic Collision Avoidance",
+        "items": [
+          {
+            "task": "Autopilot",
+            "condition": "DISENGAGE",
+            "notes": "Take control manually"
+          },
+          {
+            "task": "Altitude",
+            "condition": "CLIMB OR DESCEND AS NECESSARY",
+            "notes": "Avoid collision"
+          },
+          {
+            "task": "Communication",
+            "condition": "CONTACT ATC IMMEDIATELY",
+            "notes": "Provide accurate position"
+          }
+        ]
+      },
+      "2009_aircraft_fire": {
+        "name": "Aircraft Fire Procedures",
+        "items": [
+          {
+            "task": "Fire Extinguishers",
+            "condition": "ACTIVATE",
+            "notes": "Extinguish fire if manageable"
+          },
+          {
+            "task": "Evacuation",
+            "condition": "INITIATE",
+            "notes": "Proceed with emergency evacuation if fire spreads"
+          },
+          {
+            "task": "Emergency Gear",
+            "condition": "DEACTIVATE IF NECESSARY",
+            "notes": "For rapid exit"
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "last_updated": "2024-01-30",
+      "source": "FlyUK Operations Manual",
+      "version": "UKV-PRD-A320-CHECKLIST-V4"
+    }
+  }
+}
