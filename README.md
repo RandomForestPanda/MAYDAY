@@ -1,2 +1,1 @@
-# MAYDAY : A PILOT ASSISTANCE TOOL 
-
+# MAYDAY : A PILOT ASSISTANCE TOOL with glide slope visualisation
