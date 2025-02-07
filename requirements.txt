@@ -5,3 +5,12 @@ bcrypt
 SpeechRecognition
 streamlit
 fastapi
+streamlit
+pandas
+requests
+python-dotenv
+sentence-transformers
+pydantic
+faiss-cpu
+huggingface_hub
+datetime
