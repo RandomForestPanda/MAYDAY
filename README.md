@@ -27,7 +27,7 @@ Modern aviation has integrated AI into various systems, yet there remains a cruc
 
 ## **Technology Stack**  
 
-- **LLM Generation**: Open-source **Hugging Face SLMs** with **remote inference via Mistral v0.3 7B**.  
+- **LLM Generation**: Open-source **Hugging Face SLMs** with **remote inference via Mistral-7B-Instruct-v0.3**.  
 - **Backend**: Python (FastAPI), FAISS for retrieval.  
 - **Frontend**: Streamlit-based UI for pilot interaction.  
 - **Speech-to-Text**: Integrated **voice input** for hands-free interaction.  
