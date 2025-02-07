@@ -35,9 +35,11 @@ Modern aviation has integrated AI into various systems, yet there remains a cruc
 
 ## **Installation & Usage**  
 
-1. **Download & Unzip** the repository.  
-2. **Install Dependencies:**  
+1. **Download & Unzip** the repository.
+2. **Edit .env file to icnlude your huggingface API key**
+3. **Install Dependencies:**  
    ```bash
+     
      pip install -r requirements.txt
      python login.py
   
