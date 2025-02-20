@@ -1,4 +1,4 @@
-# MAYDAY: A Pilot Assistance Tool  
+# MAYDAY: A Pilot Assistance Tool!  
 
 Modern aviation has integrated AI into various systems, yet there remains a crucial gap where AI-driven assistance can enhance pilot decision-making. Leveraging **Generative AI and Large Language Models (LLMs)**, we developed **MAYDAY**, an AI-powered tool designed to assist pilots in real-time, reducing stress and improving situational awareness.  
 
